@@ -13,7 +13,7 @@ fpath+=/Users/seanammirati/.oh-my-zsh/custom/plugins/conda-zsh-completion
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 POWERLEVEL9K_MODE='nerdfont-complete'
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
 function sp {
