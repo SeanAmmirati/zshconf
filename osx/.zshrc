@@ -149,9 +149,9 @@ POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='green'
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+# Example format: plugins=(web-search rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions colorize iterm2 osx python pip brew docker vi-mode aws)
+plugins=(web-search git zsh-syntax-highlighting zsh-autosuggestions colorize iterm2 osx python pip brew docker vi-mode aws)
 
 source $ZSH/oh-my-zsh.sh
 
