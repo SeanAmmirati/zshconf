@@ -7,7 +7,7 @@ export ZSH="/home/seanammirati/.oh-my-zsh"
 ## conda completion
 fpath+=/home/seanammirati/.oh-my-zsh/custom/plugins/conda-zsh-completion
 
-
+# export PATH="/home/seanammirati/anaconda3/bin:$PATH"  # commented out by conda initialize
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -149,9 +149,9 @@ POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='green'
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(web-search rails git textmate ruby lighthouse)
+# Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(web-search git zsh-syntax-highlighting zsh-autosuggestions colorize iterm2 python pip dnf docker vi-mode aws)
+plugins=(git zsh-syntax-highlighting web-search zsh-autosuggestions colorize iterm2 python pip dnf docker vi-mode aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -189,7 +189,7 @@ if [ $? -eq 0 ]; then
     \eval "$__conda_setup"
 else
     if [ -f "/home/seanammirati/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/seanammirati/opt/anaconda3/etc/profile.d/conda.sh"
+# . "/home/seanammirati/opt/anaconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
         CONDA_CHANGEPS1=false conda activate base
     else
         \export PATH="/home/seanammirati/opt/anaconda3/bin:$PATH"
@@ -217,3 +217,22 @@ autoload -Uz compinit && compinit
 
 # Load conda completion
 compinit conda
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/seanammirati/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/seanammirati/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/seanammirati/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/seanammirati/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Key Bindings
+
+bindkey '\eOH' beginning-of-line
+bindkey '\eOF' end-of-line
