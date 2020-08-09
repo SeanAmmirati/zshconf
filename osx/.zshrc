@@ -217,3 +217,9 @@ autoload -Uz compinit && compinit
 
 # Load conda completion
 compinit conda
+
+# iterm keybindings
+bindkey "^[D" backward-word
+bindkey "^[C" forward-word
+bindkey "^[a" beginning-of-line
+bindkey "^[e" end-of-line
